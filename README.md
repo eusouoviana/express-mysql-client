@@ -1,18 +1,23 @@
-# Node MySQL Admin
+# Express MySQL Client
 
 [![npm version](https://badge.fury.io/js/node-mysql-admin.svg)](https://badge.fury.io/js/node-mysql-admin)
 
+This project is a fork of Node MySQL Admin (MIT-licensed) with the goal of adding extra configuration options,
+e.g., the possibility to choose the URL, predefined host/username, and IP-level access control.  
+  
+The fork is also licensed under the MIT license.
+  
 A fantastically elegant interface for MySQL and Node.js/Express management, like phpmyadmin.
 
 ## Installation
 
 ```
-npm install node-mysql-admin
+npm install express-mysql-client
 ```
 
 ## Setup
 
-Note: node-mysql-admin currently does not support Windows.
+Note: express-mysql-client currently does not support Windows.
 
 ### Within Express
 
@@ -20,17 +25,17 @@ Note: node-mysql-admin currently does not support Windows.
 var express = require('express');
 var app = express();
 
-var mysqlAdmin = require('node-mysql-admin');
+var mysqlAdmin = require('express-mysql-client');
 app.use(mysqlAdmin(app));
 ```
-Passing your instantiated Express app into node-mysql-admin is required for the middleware to function properly.
+Passing your instantiated Express app into express-mysql-client is required for the middleware to function properly.
 
 ### Within Koa
 
 ```javascript
 var express = require('express')
   , Koa = require('koa')
-  , nodeMyAdmin = require('node-mysql-admin');
+  , nodeMyAdmin = require('express-mysql-client');
   
 const app = new Koa();
 const expressApp = express();
@@ -57,18 +62,18 @@ app.listen(3333);
 
 ## Usage
 
-To begin using node-mysql-admin, simply follow the instructions below.
+To begin using express-mysql-client, simply follow the instructions below.
 
 [Login](#login) | [Navbar](#navbar) | [Overview](#overview) | [Database](#database) | [System](#system) | [Settings](#settings)
 
 ### Login
 Navigate to yourdomain/myadmin and log in using your MySQL Server credentials.
-node-mysql-admin will attempt to connect to your MySQL server and validate the information
+express-mysql-client will attempt to connect to your MySQL server and validate the information
 you provided. Once verified, you will be redirected to the Overview page.
 
 ### Navbar
 
-The navbar located at the top of the page contains links to all the main views within node-mysql-admin and a button to logout is available throughout the app. The navbar includes links to Overview, DB, System, Direct Query, and Settings. These pages are described below.
+The navbar located at the top of the page contains links to all the main views within express-mysql-client and a button to logout is available throughout the app. The navbar includes links to Overview, DB, System, Direct Query, and Settings. These pages are described below.
 
 ### Overview
 This page displays a dashboard of relevant server information including CPU usage, a
@@ -128,7 +133,7 @@ The System view has two main components. The first is the Modules view. This sec
 
 ![Image of direct queries](https://i.gyazo.com/7f29974fd44e4404a853d7888f40186f.gif)
 
-Direct Queries provides the ability to execute raw SQL queries directly from node-mysql-admin. Type in the desired query and click 'submit query'. If the query was successful, a table containing the results of the query will be displayed the query window. If the query was unsuccessful, an error message will pop up detailing why the query was unsuccessful.
+Direct Queries provides the ability to execute raw SQL queries directly from express-mysql-client. Type in the desired query and click 'submit query'. If the query was successful, a table containing the results of the query will be displayed the query window. If the query was unsuccessful, an error message will pop up detailing why the query was unsuccessful.
 
 ### Settings
 

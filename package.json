@@ -1,7 +1,7 @@
 {
-  "name": "node-mysql-admin",
-  "version": "0.1.8",
-  "description": "A fantastically elegant interface for MySQL and Node.js/Express/Koa management, like phpMyAdmin",
+  "name": "express-mysql-client",
+  "version": "1.0.0",
+  "description": "An improved version of the nodemysql, a fantastically elegant interface for MySQL and Node.js/Express/Koa management, like phpMyAdmin",
   "keywords": [
     "express",
     "koa",
@@ -42,18 +42,21 @@
     {
       "name": "Stan Zhai",
       "url": "https://github.com/stanzhai"
+    },
+    {
+      "name": "João Pedro Viana",
+      "url": "https://github.com/eusouoviana"
     }
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/stanzhai/node-mysql-admin/issues"
+    "url": "https://github.com/eusouoviana/express-mysql-client/issues"
   },
   "dependencies": {
     "bluebird": "^2.10.2",
     "body-parser": "^1.14.1",
     "express": "^4.13.3",
     "jsonwebtoken": "^5.4.0",
-    "morgan": "^1.6.1",
     "mysql": "^2.9.0",
     "path": "^0.12.7",
     "promise-mysql": "^1.1.1",

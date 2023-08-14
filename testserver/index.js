@@ -4,12 +4,15 @@ var mysql = require('mysql');
 
 var nodeadmin = require(__dirname + '/../middleware/index.js');
 
+app.use(nodeadmin(app, {
+  defaultHost: 'localhost:3303',
+  defaultUserName: '',
+  defaultPassword: '',
+  allowedIpList: '127.0.0.1',
+}));
 
-app.use(nodeadmin(app, process.env.PORT || 4040));
-app.use('/', function(req, res, next) {
-
-  res.send('<h1>HELLO WORLD</h1>');
-
+app.use('/', function (req, res, next) {
+  res.redirect('/myadmin');
 });
 
 app.listen(process.env.PORT || 4040);
